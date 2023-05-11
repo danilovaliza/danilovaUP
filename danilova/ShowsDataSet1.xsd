@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ShowsDataSet1" targetNamespace="http://tempuri.org/ShowsDataSet1.xsd" xmlns:mstns="http://tempuri.org/ShowsDataSet1.xsd" xmlns="http://tempuri.org/ShowsDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DanilovaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DanilovaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.danilova.Properties.Settings.GlobalReference.Default.DanilovaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SpektakliTableAdapter" GeneratorDataComponentClassName="SpektakliTableAdapter" Name="Spektakli" UserDataComponentName="SpektakliTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DanilovaConnectionString (Settings)" DbObjectName="Danilovaa.dbo.Spektakli" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nazvanie, Janr, Vremya_nachala, Vremya_okonchanie, Sena FROM dbo.Spektakli</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nazvanie" DataSetColumn="Nazvanie" />
+              <Mapping SourceColumn="Janr" DataSetColumn="Janr" />
+              <Mapping SourceColumn="Vremya_nachala" DataSetColumn="Vremya_nachala" />
+              <Mapping SourceColumn="Vremya_okonchanie" DataSetColumn="Vremya_okonchanie" />
+              <Mapping SourceColumn="Sena" DataSetColumn="Sena" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ShowsDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ShowsDataSet1" msprop:Generator_UserDSName="ShowsDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Spektakli" msprop:Generator_TableClassName="SpektakliDataTable" msprop:Generator_TableVarName="tableSpektakli" msprop:Generator_TablePropName="Spektakli" msprop:Generator_RowDeletingName="SpektakliRowDeleting" msprop:Generator_RowChangingName="SpektakliRowChanging" msprop:Generator_RowEvHandlerName="SpektakliRowChangeEventHandler" msprop:Generator_RowDeletedName="SpektakliRowDeleted" msprop:Generator_UserTableName="Spektakli" msprop:Generator_RowChangedName="SpektakliRowChanged" msprop:Generator_RowEvArgName="SpektakliRowChangeEvent" msprop:Generator_RowClassName="SpektakliRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nazvanie" msprop:Generator_ColumnVarNameInTable="columnNazvanie" msprop:Generator_ColumnPropNameInRow="Nazvanie" msprop:Generator_ColumnPropNameInTable="NazvanieColumn" msprop:Generator_UserColumnName="Nazvanie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Janr" msprop:Generator_ColumnVarNameInTable="columnJanr" msprop:Generator_ColumnPropNameInRow="Janr" msprop:Generator_ColumnPropNameInTable="JanrColumn" msprop:Generator_UserColumnName="Janr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vremya_nachala" msprop:Generator_ColumnVarNameInTable="columnVremya_nachala" msprop:Generator_ColumnPropNameInRow="Vremya_nachala" msprop:Generator_ColumnPropNameInTable="Vremya_nachalaColumn" msprop:Generator_UserColumnName="Vremya_nachala" type="xs:duration" minOccurs="0" />
+              <xs:element name="Vremya_okonchanie" msprop:Generator_ColumnVarNameInTable="columnVremya_okonchanie" msprop:Generator_ColumnPropNameInRow="Vremya_okonchanie" msprop:Generator_ColumnPropNameInTable="Vremya_okonchanieColumn" msprop:Generator_UserColumnName="Vremya_okonchanie" type="xs:duration" minOccurs="0" />
+              <xs:element name="Sena" msprop:Generator_ColumnVarNameInTable="columnSena" msprop:Generator_ColumnPropNameInRow="Sena" msprop:Generator_ColumnPropNameInTable="SenaColumn" msprop:Generator_UserColumnName="Sena" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
